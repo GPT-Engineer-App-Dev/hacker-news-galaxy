@@ -51,6 +51,10 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        hacker: {
+          green: "#00ff00",
+          darkGreen: "#003300",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -66,10 +70,20 @@ module.exports = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        blink: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0 },
+        },
+        glow: {
+          "0%, 100%": { textShadow: "0 0 5px #00ff00, 0 0 10px #00ff00" },
+          "50%": { textShadow: "0 0 20px #00ff00, 0 0 30px #00ff00" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        blink: "blink 1s step-end infinite",
+        glow: "glow 2s ease-in-out infinite",
       },
     },
   },
